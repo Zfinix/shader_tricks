@@ -1,8 +1,9 @@
 #version 320 es
 
 precision highp float;
-
 uniform float iTime;
+
+/// https://www.shadertoy.com/view/MdXSzS
 
 vec4 fragment(in vec2 uV, in vec2 fragCoord) {
     vec2 uv = (fragCoord.xy / resolution.xy) - .5;
@@ -19,8 +20,8 @@ vec4 fragment(in vec2 uV, in vec2 fragCoord) {
         vec3 p = s * vec3(uv, 0.0);
         p.xy *= ma;
         p += vec3(.22, .3, s - 1.5 - sin(iTime * .13) * .1);
-        for(float i = 0.0; i < 8.0; i++){
-             p = abs(p) / dot(p, p) - 0.659;
+        for(float i = 0.0; i < 8.0; i++) {
+            p = abs(p) / dot(p, p) - 0.659;
         }
         v1 += dot(p, p) * .0015 * (1.8 + sin(length(uv.xy * 13.0) + .5 - iTime * .2));
         v2 += dot(p, p) * .0013 * (1.5 + sin(length(uv.xy * 14.5) + 1.2 - iTime * .3));

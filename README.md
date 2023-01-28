@@ -4,7 +4,9 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project explores how to use GLSL shaders in Flutter using `umbra`, `flame` and `dart:ui` libraries.
+
+To complile shaders you will need to run `umbra generate shaders/*.glsl --output lib/shaders/`
 
 A few resources to get you started if this is your first Flutter project:
 

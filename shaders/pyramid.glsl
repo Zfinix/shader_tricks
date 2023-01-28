@@ -1,7 +1,8 @@
 #version 320 es
 
-precision highp float;
+// https://www.shadertoy.com/view/tsXBzS
 
+precision highp float;
 uniform float iTime;
 
 vec3 palette(float d) {

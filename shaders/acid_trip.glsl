@@ -1,10 +1,10 @@
 #version 320 es
 
-precision highp float;
-
 // Created by evilryu
 // License Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+// https://www.shadertoy.com/view/MdXSWn
 
+precision highp float;
 uniform float iTime;
 
 vec3 mb(vec3 p) {
@@ -76,7 +76,7 @@ vec3 intersect(in vec3 ro, in vec3 rd, in float pixel_size) {
     float res_t = 0.0;
     float res_d = 1000.0;
     vec3 c = vec3(0.0, 0.0, 0);
-    vec3 res_c =  vec3(0.0, 0.0, 0.0);
+    vec3 res_c = vec3(0.0, 0.0, 0.0);
     float max_error = 1000.0;
     float d = 1.0;
     float pd = 100.0;
@@ -127,7 +127,7 @@ vec4 fragment(in vec2 uV, in vec2 fragCoord) {
     uV.x *= resolution.x / resolution.y;
 
     float pixel_size = 1.0 / (resolution.x * 2.0);
-	
+
     // camera
     stime = 0.7 + 0.3 * sin(iTime * 0.4);
     ctime = 0.7 + 0.3 * cos(iTime * 0.4);

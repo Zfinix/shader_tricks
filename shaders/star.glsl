@@ -7,6 +7,7 @@ uniform sampler2D iChannel0;
 uniform vec3 starColor;
 uniform vec3 starGlowColor;
 
+/// original: https://www.shadertoy.com/view/4dXGR4
 // based on https://www.shadertoy.com/view/lsf3RH by
 // trisomie21 (THANKS!)
 // My apologies for the ugly code.
